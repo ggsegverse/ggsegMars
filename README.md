@@ -1,0 +1,52 @@
+# ggsegMars
+
+MarsAtlas cortical parcellation for ggseg.
+
+This package contains dataset for plotting the MarsAtlas cortical and
+subcortical parcellation with ggseg and ggseg3d. The atlas includes 41 cortical
+parcels per hemisphere and 7 subcortical structures per hemisphere (96 regions
+total) in MNI-Colin27 space.
+
+## Installation
+
+We recommend installing the ggseg-atlases through the ggseg
+[r-universe](https://ggseg.r-universe.dev/ui#builds):
+
+``` r
+options(repos = c(
+    ggseg = 'https://ggseg.r-universe.dev',
+    CRAN = 'https://cloud.r-project.org'))
+
+install.packages('ggsegMars')
+```
+
+You can install the development version from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("remotes")
+remotes::install_github("ggseg/ggsegMars")
+```
+
+## Source data
+
+The volumetric label file (`atlas_marsatlas.nii.gz`) and label definitions
+(`labels_marsatlas.csv`) in `data-raw/` were obtained from the atlasreader
+GitHub repository:
+
+```
+https://github.com/miykael/atlasreader
+```
+
+Original source: MeCA research group
+<https://meca-brain.org/software/marsatlas-colin27/>
+
+## Reference
+
+Auzias G, Coulon O, Brovelli A (2016). MarsAtlas: A cortical parcellation
+atlas for functional mapping. *Human Brain Mapping*, 37(4), 1573-1592.
+
+## Code of Conduct
+
+Please note that the ggsegMars project is released with a
+[Contributor Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this
+project, you agree to abide by its terms.
