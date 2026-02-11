@@ -1,43 +1,57 @@
 # ggsegMars
 
-MarsAtlas cortical parcellation for ggseg.
+> **Work in Progress** — This package is under active development and
+> has not yet been officially released.
 
-This package contains dataset for plotting the MarsAtlas cortical and
-subcortical parcellation with ggseg and ggseg3d. The atlas includes 41
-cortical parcels per hemisphere and 7 subcortical structures per
-hemisphere (96 regions total) in MNI-Colin27 space.
+MarsAtlas cortical parcellation for the ggseg ecosystem.
 
 ## Installation
 
-We recommend installing the ggseg-atlases through the ggseg
-[r-universe](https://ggseg.r-universe.dev/ui#builds):
+You can install this package from [GitHub](https://github.com/) with:
 
 ``` r
-options(repos = c(
-    ggseg = 'https://ggseg.r-universe.dev',
-    CRAN = 'https://cloud.r-project.org'))
-
-install.packages('ggsegMars')
+# install.packages("pak")
+pak::pak("ggseg/ggsegMars")
 ```
 
-You can install the development version from
-[GitHub](https://github.com/) with:
+## Cortical atlas
 
 ``` r
-# install.packages("remotes")
-remotes::install_github("ggseg/ggsegMars")
+library(ggseg)
+#> Loading required package: ggseg.formats
+library(ggsegMars)
+library(ggplot2)
+
+ggplot() +
+  geom_brain(
+    atlas = marsatlas_cortical,
+    mapping = aes(fill = label),
+    position = position_brain(hemi ~ view),
+    show.legend = FALSE
+  ) +
+  scale_fill_manual(values = marsatlas_cortical$palette, na.value = "grey") +
+  theme_void() +
+  ggtitle("MarsAtlas cortical parcellation")
 ```
 
-## Source data
+![](reference/figures/README-cortical-1.png)
 
-The volumetric label file (`atlas_marsatlas.nii.gz`) and label
-definitions (`labels_marsatlas.csv`) in `data-raw/` were obtained from
-the atlasreader GitHub repository:
+## Subcortical atlas
 
-    https://github.com/miykael/atlasreader
+``` r
+ggplot() +
+  geom_brain(
+    atlas = marsatlas_subcortical,
+    mapping = aes(fill = label),
+    position = position_brain(. ~ view),
+    show.legend = FALSE
+  ) +
+  scale_fill_manual(values = marsatlas_subcortical$palette, na.value = "grey") +
+  theme_void() +
+  ggtitle("MarsAtlas subcortical structures")
+```
 
-Original source: MeCA research group
-<https://meca-brain.org/software/marsatlas-colin27/>
+![](reference/figures/README-subcortical-1.png)
 
 ## Reference
 
