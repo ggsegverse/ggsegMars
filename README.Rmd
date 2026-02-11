@@ -1,10 +1,23 @@
+---
+output: github_document
+---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  fig.width = 6,
+  fig.retina = 3,
+  out.width = "100%"
+)
+```
+
 # ggsegMars
 
-> **Work in Progress** — This package is under active development and
-> has not yet been officially released.
+> **Work in Progress** — This package is under active development and has not yet been officially released.
 
 MarsAtlas cortical parcellation for the ggseg ecosystem.
 
@@ -18,10 +31,8 @@ pak::pak("ggseg/ggsegMars")
 ```
 
 ## Cortical atlas
-
-``` r
+```{r "cortical"}
 library(ggseg)
-#> Loading required package: ggseg.formats
 library(ggsegMars)
 library(ggplot2)
 
@@ -37,11 +48,8 @@ ggplot() +
   ggtitle("MarsAtlas cortical parcellation")
 ```
 
-<img src="man/figures/README-cortical-1.png" alt="" width="100%" />
-
 ## Subcortical atlas
-
-``` r
+```{r "subcortical"}
 ggplot() +
   geom_brain(
     atlas = marsatlas_subcortical,
@@ -54,16 +62,13 @@ ggplot() +
   ggtitle("MarsAtlas subcortical structures")
 ```
 
-<img src="man/figures/README-subcortical-1.png" alt="" width="100%" />
-
 ## Reference
 
-Auzias G, Coulon O, Brovelli A (2016). MarsAtlas: A cortical
-parcellation atlas for functional mapping. *Human Brain Mapping*, 37(4),
-1573-1592.
+Auzias G, Coulon O, Brovelli A (2016). MarsAtlas: A cortical parcellation
+atlas for functional mapping. *Human Brain Mapping*, 37(4), 1573-1592.
 
 ## Code of Conduct
 
-Please note that the ggsegMars project is released with a [Contributor
-Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this project,
-you agree to abide by its terms.
+Please note that the ggsegMars project is released with a
+[Contributor Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this
+project, you agree to abide by its terms.
