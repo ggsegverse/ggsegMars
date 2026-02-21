@@ -12,6 +12,7 @@
 #'   \doi{10.1002/hbm.23121}
 #'
 #' @return A [ggseg.formats::ggseg_atlas] object (cortical).
+#' @import ggseg.formats
 #' @export
 #' @examples
 #' marsatlas_cortical()

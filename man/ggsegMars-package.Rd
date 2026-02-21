@@ -11,8 +11,8 @@ MarsAtlas cortical parcellation based on macroanatomical information with 41 reg
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/ggseg/ggsegMars}
-  \item Report bugs at \url{https://github.com/ggseg/ggsegMars/issues}
+  \item \url{https://github.com/ggsegverse/ggsegMars}
+  \item Report bugs at \url{https://github.com/ggsegverse/ggsegMars/issues}
 }
 
 }
