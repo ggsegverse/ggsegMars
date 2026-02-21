@@ -38,12 +38,12 @@ library(ggplot2)
 
 ggplot() +
   geom_brain(
-    atlas = marsatlas_cortical,
+    atlas = marsatlas_cortical(),
     mapping = aes(fill = label),
     position = position_brain(hemi ~ view),
     show.legend = FALSE
   ) +
-  scale_fill_manual(values = marsatlas_cortical$palette, na.value = "grey") +
+  scale_fill_manual(values = marsatlas_cortical()$palette, na.value = "grey") +
   theme_void() +
   ggtitle("MarsAtlas cortical parcellation")
 ```
@@ -52,12 +52,12 @@ ggplot() +
 ```{r "subcortical"}
 ggplot() +
   geom_brain(
-    atlas = marsatlas_subcortical,
+    atlas = marsatlas_subcortical(),
     mapping = aes(fill = label),
     position = position_brain(. ~ view),
     show.legend = FALSE
   ) +
-  scale_fill_manual(values = marsatlas_subcortical$palette, na.value = "grey") +
+  scale_fill_manual(values = marsatlas_subcortical()$palette, na.value = "grey") +
   theme_void() +
   ggtitle("MarsAtlas subcortical structures")
 ```
