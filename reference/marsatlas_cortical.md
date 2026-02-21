@@ -3,20 +3,20 @@
 Cortical parcellation based on macroanatomical information from Auzias
 et al. (2016), with 41 regions per hemisphere. Contains 2D polygon
 geometry for
-[`ggseg::geom_brain()`](https://rdrr.io/pkg/ggseg/man/ggbrain.html) and
-3D vertex indices for
+[`ggseg::geom_brain()`](https://ggsegverse.github.io/ggseg/reference/ggbrain.html)
+and 3D vertex indices for
 [`ggseg3d::ggseg3d()`](https://rdrr.io/pkg/ggseg3d/man/ggseg3d.html).
 
 ## Usage
 
 ``` r
-data(marsatlas_cortical)
+marsatlas_cortical()
 ```
 
-## Format
+## Value
 
 A
-[ggseg.formats::ggseg_atlas](https://ggseg.github.io/ggseg.formats/reference/ggseg_atlas.html)
+[ggseg.formats::ggseg_atlas](https://ggsegverse.github.io/ggseg.formats/reference/ggseg_atlas.html)
 object (cortical).
 
 ## References
@@ -28,13 +28,12 @@ parcellation atlas for functional mapping.
 ## See also
 
 Other ggseg_atlases:
-[`marsatlas_subcortical`](https://ggseg.github.io/ggsegMars/reference/marsatlas_subcortical.md)
+[`marsatlas_subcortical()`](https://ggseg.github.io/ggsegMars/reference/marsatlas_subcortical.md)
 
 ## Examples
 
 ``` r
-data(marsatlas_cortical)
-marsatlas_cortical
+marsatlas_cortical()
 #> 
 #> ── marsatlas_cortical ggseg atlas ──────────────────────────────────────────────
 #> Type: cortical

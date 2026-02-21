@@ -6,13 +6,13 @@ polygon geometry and 3D meshes.
 ## Usage
 
 ``` r
-data(marsatlas_subcortical)
+marsatlas_subcortical()
 ```
 
-## Format
+## Value
 
 A
-[ggseg.formats::ggseg_atlas](https://ggseg.github.io/ggseg.formats/reference/ggseg_atlas.html)
+[ggseg.formats::ggseg_atlas](https://ggsegverse.github.io/ggseg.formats/reference/ggseg_atlas.html)
 object (subcortical).
 
 ## References
@@ -24,13 +24,12 @@ parcellation atlas for functional mapping.
 ## See also
 
 Other ggseg_atlases:
-[`marsatlas_cortical`](https://ggseg.github.io/ggsegMars/reference/marsatlas_cortical.md)
+[`marsatlas_cortical()`](https://ggseg.github.io/ggsegMars/reference/marsatlas_cortical.md)
 
 ## Examples
 
 ``` r
-data(marsatlas_subcortical)
-marsatlas_subcortical
+marsatlas_subcortical()
 #> 
 #> ── marsatlas_subcortical ggseg atlas ───────────────────────────────────────────
 #> Type: subcortical
