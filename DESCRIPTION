@@ -22,12 +22,8 @@ Suggests:
     rmarkdown,
     testthat (>= 3.0.0),
     vdiffr
-Remotes:
-    ggseg/ggseg,
-    ggseg/ggseg3d,
-    ggseg/ggseg.formats
-URL: https://github.com/ggseg/ggsegMars
-BugReports: https://github.com/ggseg/ggsegMars/issues
+URL: https://github.com/ggsegverse/ggsegMars
+BugReports: https://github.com/ggsegverse/ggsegMars/issues
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
 Config/testthat/edition: 3
