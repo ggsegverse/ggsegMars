@@ -9,9 +9,9 @@ indices, for use with 'ggseg' and 'ggseg3d'.
 
 Useful links:
 
-- <https://github.com/ggseg/ggsegMars>
+- <https://github.com/ggsegverse/ggsegMars>
 
-- Report bugs at <https://github.com/ggseg/ggsegMars/issues>
+- Report bugs at <https://github.com/ggsegverse/ggsegMars/issues>
 
 ## Author
 
