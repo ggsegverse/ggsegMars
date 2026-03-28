@@ -1,10 +1,6 @@
-library(dplyr)
-library(ggsegExtra)
+library(ggseg.extra)
 library(ggseg.formats)
 
-future::plan(future::multisession(workers = 4))
-progressr::handlers("cli")
-progressr::handlers(global = TRUE)
 
 labels <- readr::read_csv(
   here::here("data-raw", "labels_marsatlas.csv"),
@@ -25,7 +21,7 @@ if (!file.exists(volume_file)) {
   cli::cli_abort("Volume not found: {.path {volume_file}}")
 }
 
-atlases <- create_wholebrain_atlas(
+atlases <- create_wholebrain_from_volume(
   input_volume = volume_file,
   input_lut = lut_file,
   atlas_name = "marsatlas",
