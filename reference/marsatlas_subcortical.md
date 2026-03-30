@@ -30,5 +30,22 @@ Other ggseg_atlases:
 
 ``` r
 marsatlas_subcortical()
-#> Error in marsatlas_subcortical(): object '.marsatlas_subcortical' not found
+#> 
+#> ── marsatlas_subcortical ggseg atlas ───────────────────────────────────────────
+#> Type: subcortical
+#> Regions: 3
+#> Hemispheres: right, left
+#> Views: axial_1, axial_2, axial_3, axial_4, coronal_1, coronal_2, coronal_3,
+#> sagittal
+#> Palette: ✔
+#> Rendering: ✔ ggseg
+#> ✔ ggseg3d (meshes)
+#> ────────────────────────────────────────────────────────────────────────────────
+#> # A tibble: 4 × 3
+#>   hemi  region                  label                        
+#>   <chr> <chr>                   <chr>                        
+#> 1 right isthmus cingulate corte Right_Isthmus_Cingulate_Corte
+#> 2 left  puttamen                Left_Puttamen                
+#> 3 left  accumbens               Left_Accumbens               
+#> 4 right puttamen                Right_Puttamen               
 ```
