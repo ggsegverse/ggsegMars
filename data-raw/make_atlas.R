@@ -35,18 +35,13 @@ atlases <- create_wholebrain_from_volume(
   verbose = TRUE
 )
 
-marsatlas_cortical <- atlases$cortical
-marsatlas_subcortical <- atlases$subcortical
+.marsatlas_cortical <- atlases$cortical
+.marsatlas_subcortical <- atlases$subcortical
 
-cli::cli_alert_success("Cortical: {nrow(marsatlas_cortical$core)} regions")
-cli::cli_alert_success("Subcortical: {nrow(marsatlas_subcortical$core)} regions")
+print(.marsatlas_cortical)
+plot(.marsatlas_cortical)
+print(.marsatlas_subcortical)
+plot(.marsatlas_subcortical)
 
-brain_pals <- stats::setNames(
-  list(marsatlas_cortical$palette, marsatlas_subcortical$palette),
-  c(marsatlas_cortical$atlas, marsatlas_subcortical$atlas)
-)
-save(brain_pals, file = here::here("R/sysdata.rda"), compress = "xz")
-
-usethis::use_data(marsatlas_cortical, marsatlas_subcortical,
-  overwrite = TRUE, compress = "xz")
-cli::cli_alert_success("Saved to data/")
+usethis::use_data(.marsatlas_cortical, .marsatlas_subcortical,
+  overwrite = TRUE, compress = "xz", internal = TRUE)
