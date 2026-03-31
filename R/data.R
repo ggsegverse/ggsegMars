@@ -6,6 +6,7 @@
 #' 3D vertex indices for [ggseg3d::ggseg3d()].
 #'
 #' @family ggseg_atlases
+#' @family cortical_atlases
 #'
 #' @references Auzias G, Coulon O, Brovelli A (2016).
 #'   MarsAtlas: A cortical parcellation atlas for functional mapping.
@@ -23,6 +24,7 @@ marsatlas_cortical <- function() .marsatlas_cortical
 #' Contains 2D polygon geometry and 3D meshes.
 #'
 #' @family ggseg_atlases
+#' @family subcortical_atlases
 #'
 #' @references Auzias G, Coulon O, Brovelli A (2016).
 #'   MarsAtlas: A cortical parcellation atlas for functional mapping.
