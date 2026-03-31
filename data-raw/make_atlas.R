@@ -37,11 +37,19 @@ atlases <- create_wholebrain_from_volume(
 
 .marsatlas_cortical <- atlases$cortical
 .marsatlas_subcortical <- atlases$subcortical
+.marsatlas_cerebellar <- atlases$cerebellar
 
 print(.marsatlas_cortical)
 plot(.marsatlas_cortical)
 print(.marsatlas_subcortical)
 plot(.marsatlas_subcortical)
 
-usethis::use_data(.marsatlas_cortical, .marsatlas_subcortical,
-  overwrite = TRUE, compress = "xz", internal = TRUE)
+if (!is.null(.marsatlas_cerebellar)) {
+  print(.marsatlas_cerebellar)
+  plot(.marsatlas_cerebellar)
+  usethis::use_data(.marsatlas_cortical, .marsatlas_subcortical,
+    .marsatlas_cerebellar, overwrite = TRUE, compress = "xz", internal = TRUE)
+} else {
+  usethis::use_data(.marsatlas_cortical, .marsatlas_subcortical,
+    overwrite = TRUE, compress = "xz", internal = TRUE)
+}

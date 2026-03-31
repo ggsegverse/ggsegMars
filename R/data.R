@@ -35,3 +35,20 @@ marsatlas_cortical <- function() .marsatlas_cortical
 #' @examples
 #' marsatlas_subcortical()
 marsatlas_subcortical <- function() .marsatlas_subcortical
+#' MarsAtlas Cerebellar Parcellation
+#'
+#' Cerebellar regions from the MarsAtlas parcellation.
+#' Contains 2D polygon geometry and 3D meshes.
+#'
+#' @family ggseg_atlases
+#' @family cerebellar_atlases
+#'
+#' @references Auzias G, Coulon O, Brovelli A (2016).
+#'   MarsAtlas: A cortical parcellation atlas for functional mapping.
+#'   \doi{10.1002/hbm.23121}
+#'
+#' @return A [ggseg.formats::ggseg_atlas] object (subcortical).
+#' @export
+#' @examples
+#' marsatlas_cerebellar()
+marsatlas_cerebellar <- function() .marsatlas_cerebellar
