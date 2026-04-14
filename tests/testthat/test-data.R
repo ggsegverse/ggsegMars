@@ -26,6 +26,7 @@ describe("marsatlas_cortical", {
 
   it("renders with ggseg3d", {
     skip_if_not_installed("ggseg3d")
+    skip_if_not_installed("ggseg.meshes")
     p <- ggseg3d::ggseg3d(atlas = marsatlas_cortical())
     expect_s3_class(p, c("plotly", "htmlwidget"))
   })
@@ -40,6 +41,7 @@ describe("marsatlas_subcortical", {
 
   it("renders with ggseg3d", {
     skip_if_not_installed("ggseg3d")
+    skip_if_not_installed("ggseg.meshes")
     p <- ggseg3d::ggseg3d(atlas = marsatlas_subcortical())
     expect_s3_class(p, c("plotly", "htmlwidget"))
   })
