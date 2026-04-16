@@ -47,9 +47,14 @@ plot(.marsatlas_subcortical)
 if (!is.null(.marsatlas_cerebellar)) {
   print(.marsatlas_cerebellar)
   plot(.marsatlas_cerebellar)
-  usethis::use_data(.marsatlas_cortical, .marsatlas_subcortical,
-    .marsatlas_cerebellar, overwrite = TRUE, compress = "xz", internal = TRUE)
+  usethis::use_data(
+    .marsatlas_cortical, .marsatlas_subcortical,
+    .marsatlas_cerebellar,
+    overwrite = TRUE, compress = "xz", internal = TRUE
+  )
 } else {
-  usethis::use_data(.marsatlas_cortical, .marsatlas_subcortical,
-    overwrite = TRUE, compress = "xz", internal = TRUE)
+  usethis::use_data(
+    .marsatlas_cortical, .marsatlas_subcortical,
+    overwrite = TRUE, compress = "xz", internal = TRUE
+  )
 }

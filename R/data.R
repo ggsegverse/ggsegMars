@@ -51,4 +51,4 @@ marsatlas_subcortical <- function() .marsatlas_subcortical
 #' @export
 #' @examples
 #' marsatlas_cerebellar()
-marsatlas_cerebellar <- function() .marsatlas_cerebellar
+marsatlas_cerebellar <- function() .marsatlas_cerebellar # nolint: object_usage_linter.
