@@ -25,7 +25,6 @@ MarsAtlas: A cortical parcellation atlas for functional mapping.
 }
 \seealso{
 Other ggseg_atlases: 
-\code{\link{marsatlas_cerebellar}()},
 \code{\link{marsatlas_subcortical}()}
 }
 \concept{cortical_atlases}
