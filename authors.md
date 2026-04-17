@@ -8,7 +8,7 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/ggsegverse/ggsegMars/blob/main/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/ggsegverse/ggsegMars/blob/v1.0.1/DESCRIPTION)
 
 Mowinckel A (2026). *ggsegMars: MarsAtlas Cortical Parcellation for the
 'ggseg' Ecosystem*. R package version 1.0.1,
