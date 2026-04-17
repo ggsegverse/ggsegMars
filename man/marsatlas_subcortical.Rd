@@ -26,3 +26,4 @@ Other ggseg_atlases:
 \code{\link{marsatlas_cortical}()}
 }
 \concept{ggseg_atlases}
+\concept{subcortical_atlases}
