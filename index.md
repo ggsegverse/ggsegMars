@@ -1,9 +1,6 @@
 # ggsegMars
 
-> **Work in Progress** – This package is under active development and
-> has not yet been officially released.
-
-MarsAtlas cortical parcellation for the ggseg ecosystem.
+MarsAtlas cortical and subcortical parcellation for the ggseg ecosystem.
 
 ## Installation
 
@@ -23,7 +20,7 @@ You can install this package from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("pak")
-pak::pak("ggseg/ggsegMars")
+pak::pak("ggsegverse/ggsegMars")
 ```
 
 ## Cortical atlas
@@ -41,8 +38,7 @@ ggplot() +
     show.legend = FALSE
   ) +
   scale_fill_manual(values = marsatlas_cortical()$palette, na.value = "grey") +
-  theme_void() +
-  ggtitle("MarsAtlas cortical parcellation")
+  theme_void()
 ```
 
 ![](reference/figures/README-cortical-1.png)
@@ -58,20 +54,13 @@ ggplot() +
     show.legend = FALSE
   ) +
   scale_fill_manual(values = marsatlas_subcortical()$palette, na.value = "grey") +
-  theme_void() +
-  ggtitle("MarsAtlas subcortical structures")
+  theme_void()
 ```
 
 ![](reference/figures/README-subcortical-1.png)
 
-## Reference
+## Data source
 
 Auzias G, Coulon O, Brovelli A (2016). MarsAtlas: A cortical
 parcellation atlas for functional mapping. *Human Brain Mapping*, 37(4),
 1573-1592.
-
-## Code of Conduct
-
-Please note that the ggsegMars project is released with a [Contributor
-Code of Conduct](https://ggseg.github.io/ggsegMars/CODE_OF_CONDUCT.md).
-By contributing to this project, you agree to abide by its terms.
