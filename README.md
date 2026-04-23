@@ -38,17 +38,8 @@ pak::pak("ggsegverse/ggsegMars")
 ``` r
 library(ggseg)
 library(ggsegMars)
-library(ggplot2)
 
-ggplot() +
-  geom_brain(
-    atlas = marsatlas_cortical(),
-    mapping = aes(fill = label),
-    position = position_brain(hemi ~ view),
-    show.legend = FALSE
-  ) +
-  scale_fill_manual(values = marsatlas_cortical()$palette, na.value = "grey") +
-  theme_void()
+plot(marsatlas_cortical())
 ```
 
 <img src="man/figures/README-cortical-1.png" style="width:100.0%" />
@@ -56,15 +47,7 @@ ggplot() +
 ## Subcortical atlas
 
 ``` r
-ggplot() +
-  geom_brain(
-    atlas = marsatlas_subcortical(),
-    mapping = aes(fill = label),
-    position = position_brain(. ~ view),
-    show.legend = FALSE
-  ) +
-  scale_fill_manual(values = marsatlas_subcortical()$palette, na.value = "grey") +
-  theme_void()
+plot(marsatlas_subcortical())
 ```
 
 <img src="man/figures/README-subcortical-1.png" style="width:100.0%" />
