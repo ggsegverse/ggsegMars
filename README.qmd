@@ -54,6 +54,7 @@ pak::pak("ggsegverse/ggsegMars")
 ```{r}
 #| label: cortical
 library(ggseg)
+library(ggsegMars)
 
 plot(marsatlas_cortical())
 ```
