@@ -4,10 +4,13 @@
 
 # ggsegMars
 
-> **Work in Progress** – This package is under active development and
-> has not yet been officially released.
+<!-- badges: start -->
 
-MarsAtlas cortical parcellation for the ggseg ecosystem.
+[![R-CMD-check](https://github.com/ggsegverse/ggsegMars/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ggsegverse/ggsegMars/actions/workflows/R-CMD-check.yaml)
+[![r-universe](https://ggseg.r-universe.dev/badges/ggsegMars.png)](https://ggseg.r-universe.dev/ggsegMars)
+<!-- badges: end -->
+
+MarsAtlas cortical and subcortical parcellation for the ggseg ecosystem.
 
 ## Installation
 
@@ -27,7 +30,7 @@ You can install this package from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("pak")
-pak::pak("ggseg/ggsegMars")
+pak::pak("ggsegverse/ggsegMars")
 ```
 
 ## Cortical atlas
@@ -35,8 +38,17 @@ pak::pak("ggseg/ggsegMars")
 ``` r
 library(ggseg)
 library(ggsegMars)
+library(ggplot2)
 
-plot(marsatlas_cortical())
+ggplot() +
+  geom_brain(
+    atlas = marsatlas_cortical(),
+    mapping = aes(fill = label),
+    position = position_brain(hemi ~ view),
+    show.legend = FALSE
+  ) +
+  scale_fill_manual(values = marsatlas_cortical()$palette, na.value = "grey") +
+  theme_void()
 ```
 
 <img src="man/figures/README-cortical-1.png" style="width:100.0%" />
@@ -44,19 +56,21 @@ plot(marsatlas_cortical())
 ## Subcortical atlas
 
 ``` r
-plot(marsatlas_subcortical())
+ggplot() +
+  geom_brain(
+    atlas = marsatlas_subcortical(),
+    mapping = aes(fill = label),
+    position = position_brain(. ~ view),
+    show.legend = FALSE
+  ) +
+  scale_fill_manual(values = marsatlas_subcortical()$palette, na.value = "grey") +
+  theme_void()
 ```
 
 <img src="man/figures/README-subcortical-1.png" style="width:100.0%" />
 
-## Reference
+## Data source
 
 Auzias G, Coulon O, Brovelli A (2016). MarsAtlas: A cortical
 parcellation atlas for functional mapping. *Human Brain Mapping*, 37(4),
 1573-1592.
-
-## Code of Conduct
-
-Please note that the ggsegMars project is released with a [Contributor
-Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this project,
-you agree to abide by its terms.
