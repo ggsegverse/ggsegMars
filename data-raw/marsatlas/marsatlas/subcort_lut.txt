@@ -1,7 +1,0 @@
-212  Left_Puttamen                     0   0   0   0
-218  Left_Amygdala                     0   0   0   0
-226  Left_Accumbens                    0   0   0   0
-251  Right_Puttamen                    0   0   0   0
-254  Right_Amygdala                    0   0   0   0
-258  Right_Accumbens                   0   0   0   0
-
