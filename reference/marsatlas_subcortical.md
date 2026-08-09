@@ -41,11 +41,9 @@ marsatlas_subcortical()
 #> Rendering: ✔ ggseg
 #> ✔ ggseg3d (meshes)
 #> ────────────────────────────────────────────────────────────────────────────────
-#> # A tibble: 4 × 3
-#>   hemi  region                  label                        
-#>   <chr> <chr>                   <chr>                        
+#>    hemi                  region                         label
 #> 1 right isthmus cingulate corte Right_Isthmus_Cingulate_Corte
-#> 2 left  puttamen                Left_Puttamen                
-#> 3 left  accumbens               Left_Accumbens               
-#> 4 right puttamen                Right_Puttamen               
+#> 2  left                puttamen                 Left_Puttamen
+#> 3  left               accumbens                Left_Accumbens
+#> 4 right                puttamen                Right_Puttamen
 ```
