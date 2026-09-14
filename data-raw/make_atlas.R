@@ -26,17 +26,18 @@ atlases <- create_wholebrain_from_volume(
   input_lut = lut_file,
   atlas_name = "marsatlas",
   output_dir = "data-raw/marsatlas",
-  regheader = TRUE,
-  tolerance = 1,
-  smoothness = 2,
-  decimate = 0.5,
+  cortical_labels = c(
+    "Left_Isthmus_Cingulate_Cortex(BA_30)",
+    "Right_Isthmus_Cingulate_Cortex(BA_30)"
+  ),
+  subcortical_opts = list(decimate = 0.5),
   skip_existing = TRUE,
   cleanup = FALSE,
   verbose = TRUE
 )
 
-.marsatlas_cortical <- atlases$cortical
-.marsatlas_subcortical <- atlases$subcortical
+.marsatlas_cortical <- atlas_simplify(atlases$cortical, keep = 0.2)
+.marsatlas_subcortical <- atlas_simplify(atlases$subcortical, keep = 0.2)
 .marsatlas_cerebellar <- atlases$cerebellar
 
 print(.marsatlas_cortical)
