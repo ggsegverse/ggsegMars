@@ -14,9 +14,7 @@ describe("marsatlas_cortical", {
         show.legend = FALSE
       ) +
       ggplot2::scale_fill_manual(
-        values = suppressWarnings(
-          ggseg.formats::atlas_plot_palette(marsatlas_cortical())
-        ),
+        values = marsatlas_cortical()$palette,
         na.value = "grey"
       ) +
       ggplot2::theme_void()
@@ -29,13 +27,8 @@ describe("marsatlas_cortical", {
     expect_s3_class(p, c("plotly", "htmlwidget"))
   })
 
-  it("falls back to assigned colours for the all-black MarsAtlas LUT", {
+  it("ships the all-black MarsAtlas lookup table unchanged", {
     expect_true(all(marsatlas_cortical()$palette == "#000000"))
-    expect_warning(
-      palette <- ggseg.formats::atlas_plot_palette(marsatlas_cortical()),
-      "no usable colour palette"
-    )
-    expect_gt(length(unique(palette)), 1)
   })
 })
 

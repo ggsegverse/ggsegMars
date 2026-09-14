@@ -13,9 +13,11 @@
   and accumbens of both hemispheres, which the previous classification had
   left out entirely.
 - MarsAtlas ships a colour lookup table that is black for every region, so
-  every render was a black silhouette. `ggseg.formats::atlas_plot_palette()`
-  now falls back to automatically assigned, distinguishable colours for such
-  a palette, and warns. The lookup table itself is unchanged.
+  renders are a black silhouette with visible region boundaries. The lookup
+  table is left unchanged; a forthcoming `ggseg.formats` release falls back
+  to automatically assigned, distinguishable colours for a palette like this
+  one, and the README figures show that fallback. The tests still go through
+  the stored palette, so they run against the released `ggseg.formats`.
 - `data-raw/make_atlas.R` runs against the current `ggseg.extra` API again:
   `decimate` moved into `subcortical_opts`, and `tolerance`/`smoothness` are
   replaced by `atlas_simplify()` on the finished atlases.
