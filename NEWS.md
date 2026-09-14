@@ -1,4 +1,4 @@
-# ggsegMars 1.0.1.9000
+# ggsegMars 1.0.2.9000
 
 - The atlases are rebuilt with ggseg.extra 1.9.9.9029 and ggseg.formats
   0.0.4.9005. The cortical atlas no longer has unlabelled holes, and the
@@ -19,6 +19,13 @@
 - `data-raw/make_atlas.R` runs against the current `ggseg.extra` API again:
   `decimate` moved into `subcortical_opts`, and `tolerance`/`smoothness` are
   replaced by `atlas_simplify()` on the finished atlases.
+
+# ggsegMars 1.0.2
+
+- Atlas 2D geometry migrated to the sf-optional `brain_polygons` format
+  (`ggseg.formats` 0.0.3). The atlases now render without `sf` and its
+  GDAL/GEOS/PROJ system libraries, enabling wasm and air-gapped installs.
+  Plots are unchanged.
 
 # ggsegMars 1.0.0
 
