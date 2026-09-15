@@ -16,11 +16,13 @@
 #' @import ggseg.formats
 #' @export
 #' @examples
-#' marsatlas_cortical()
-marsatlas_cortical <- function() .marsatlas_cortical
+#' mars_cortical()
+mars_cortical <- function() .mars_cortical
+
 #' MarsAtlas Subcortical Structures
 #'
-#' Subcortical structures from the MarsAtlas parcellation.
+#' Subcortical structures from the MarsAtlas parcellation, drawn on a grey
+#' cortical silhouette for anatomical context.
 #' Contains 2D polygon geometry and 3D meshes.
 #'
 #' @family ggseg_atlases
@@ -33,5 +35,5 @@ marsatlas_cortical <- function() .marsatlas_cortical
 #' @return A [ggseg.formats::ggseg_atlas] object (subcortical).
 #' @export
 #' @examples
-#' marsatlas_subcortical()
-marsatlas_subcortical <- function() .marsatlas_subcortical
+#' mars_subcortical()
+mars_subcortical <- function() .mars_subcortical

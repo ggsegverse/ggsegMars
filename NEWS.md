@@ -1,5 +1,23 @@
 # ggsegMars 1.0.2.9000
 
+- The atlases are renamed from `marsatlas_` to `mars_`: `marsatlas_cortical()`
+  is now `mars_cortical()` and `marsatlas_subcortical()` is now
+  `mars_subcortical()`. The old prefix repeated the "atlas" in "MarsAtlas",
+  which no other ggsegverse package does. The old names still work and return
+  the same atlas, with a deprecation warning; they will be removed in a later
+  release. The `atlas` field inside each object changes with them, from
+  `marsatlas_cortical`/`marsatlas_subcortical` to `mars_cortical`/
+  `mars_subcortical`.
+- The grey `cortex_` silhouette in the subcortical atlas keeps its sulci and
+  gyri. It was polished in the same pass as the structures, and a parcel-grade
+  `keep = 0.2` straightens gyral crowns into facets and merges neighbouring
+  sulci, so the context read as a blob rather than a brain. Context and
+  structures are now polished separately: the silhouette keeps half its
+  vertices and is rounded with `chaikin`, which moves vertices rather than
+  dilating and so leaves every sulcus open, while the structures simplify
+  harder and are smoothed with `close` as before. The atlas grows from 4.7k to
+  10.4k vertices, in line with the other subcortical atlases in the ecosystem.
+
 - The atlases are rebuilt with ggseg.extra 1.9.9.9029 and ggseg.formats
   0.0.4.9005. The cortical atlas no longer has unlabelled holes, and the
   medial wall is grey context rather than parcels bleeding across it. The
