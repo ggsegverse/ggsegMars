@@ -1,6 +1,6 @@
 Package: ggsegMars
 Title: MarsAtlas Cortical Parcellation for the 'ggseg' Ecosystem
-Version: 1.0.2
+Version: 1.0.2.9000
 Authors@R: c(
     person("Athanasia Mo", "Mowinckel", , "a.m.mowinckel@psykologi.uio.no", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-5756-0223"))
@@ -14,7 +14,8 @@ Encoding: UTF-8
 Depends:
     R (>= 3.5)
 Imports:
-    ggseg.formats
+    ggseg.formats,
+    lifecycle
 Suggests:
     ggseg,
     ggseg3d,
