@@ -26,9 +26,11 @@ atlases <- create_wholebrain_from_volume(
   input_lut = lut_file,
   atlas_name = "mars",
   output_dir = "data-raw/mars",
-  cortical_labels = c(
-    "Left_Isthmus_Cingulate_Cortex(BA_30)",
-    "Right_Isthmus_Cingulate_Cortex(BA_30)"
+  labels = list(
+    cortical = c(
+      "Left_Isthmus_Cingulate_Cortex(BA_30)",
+      "Right_Isthmus_Cingulate_Cortex(BA_30)"
+    )
   ),
   subcortical_opts = list(decimate = 0.5),
   skip_existing = TRUE,
