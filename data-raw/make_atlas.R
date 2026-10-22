@@ -26,9 +26,11 @@ atlases <- create_wholebrain_from_volume(
   input_lut = lut_file,
   atlas_name = "mars",
   output_dir = "data-raw/mars",
-  cortical_labels = c(
-    "Left_Isthmus_Cingulate_Cortex(BA_30)",
-    "Right_Isthmus_Cingulate_Cortex(BA_30)"
+  labels = list(
+    cortical = c(
+      "Left_Isthmus_Cingulate_Cortex(BA_30)",
+      "Right_Isthmus_Cingulate_Cortex(BA_30)"
+    )
   ),
   subcortical_opts = list(decimate = 0.5),
   skip_existing = TRUE,
@@ -54,11 +56,18 @@ atlases <- create_wholebrain_from_volume(
 # The structures are small, compact and carry no fine detail worth keeping, so
 # they simplify harder and are smoothed with `close`, which is what rounds a
 # marching-squares parcel into a recognisable nucleus.
+# Seven slabs is more than the atlas has to say. Four of them drew a
+# handful of structures on mostly backdrop -- axial_1 showed 8 of the 14
+# regions across 17% of the panel -- which reads as an atlas with no
+# colour in it. Kept the slab that draws the most regions in each plane:
+# axial_2 (14 regions, 39% of the panel), coronal_2 (12, 44%) and
+# sagittal_left (8, 47%). The three together still draw all 14.
 .mars_subcortical <- atlases$subcortical |>
   atlas_simplify(keep = 0.5, labels = "^cortex") |>
   atlas_smooth(smoothness = 0.35, labels = "^cortex", method = "chaikin") |>
   atlas_simplify(keep = 0.25, exclude = "^cortex") |>
-  atlas_smooth(smoothness = 0.4, exclude = "^cortex")
+  atlas_smooth(smoothness = 0.4, exclude = "^cortex") |>
+  atlas_view_keep(c("axial_2", "coronal_2", "sagittal_left"))
 
 .mars_cerebellar <- atlases$cerebellar
 
