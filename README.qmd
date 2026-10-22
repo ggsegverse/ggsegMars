@@ -56,14 +56,14 @@ pak::pak("ggsegverse/ggsegMars")
 library(ggseg)
 library(ggsegMars)
 
-plot(marsatlas_cortical())
+plot(mars_cortical())
 ```
 
 ## Subcortical atlas
 
 ```{r}
 #| label: subcortical
-plot(marsatlas_subcortical())
+plot(mars_subcortical())
 ```
 
 ## Data source

@@ -39,7 +39,11 @@ pak::pak("ggsegverse/ggsegMars")
 library(ggseg)
 library(ggsegMars)
 
-plot(marsatlas_cortical())
+plot(mars_cortical())
+#> Warning: Atlas "mars_cortical" has no usable colour palette.
+#> i Every region is the same colour, so no region can be told from its
+#>   neighbours; falling back to automatically assigned colours.
+#> ! Fix the atlas colour lookup table to give each region its own colour.
 ```
 
 <img src="man/figures/README-cortical-1.png" style="width:100.0%" />
@@ -47,7 +51,11 @@ plot(marsatlas_cortical())
 ## Subcortical atlas
 
 ``` r
-plot(marsatlas_subcortical())
+plot(mars_subcortical())
+#> Warning: Atlas "mars_subcortical" has no usable colour palette.
+#> i Every region is the same colour, so no region can be told from its
+#>   neighbours; falling back to automatically assigned colours.
+#> ! Fix the atlas colour lookup table to give each region its own colour.
 ```
 
 <img src="man/figures/README-subcortical-1.png" style="width:100.0%" />

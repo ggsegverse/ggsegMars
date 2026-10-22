@@ -39,3 +39,8 @@ reference:
     desc: Brain atlases bundled in this package
     contents:
       - has_concept("ggseg_atlases")
+
+  - title: Deprecated
+    desc: Former names, kept working for one release cycle
+    contents:
+      - ggsegMars-deprecated
